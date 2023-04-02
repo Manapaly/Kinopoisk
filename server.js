@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
 })
 
 const PORT = 8000;
+
+app.get('/login', (req, res) => {
+    res.render('login')
+})
+
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 })
