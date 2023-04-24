@@ -19,6 +19,19 @@ app.get('/register', (req, res) => {
     res.render('register')
 })
 
+app.get('/profile', (req, res) => {
+    res.render('profile')
+})
+app.get('/admin', (req, res) => {
+    res.render('adminProfile')
+})
+app.get('/new', (req, res) => {
+    res.render('newFilm')
+})
+app.get('/edit', (req, res) => {
+    res.render('editFilm')
+})
+
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 })
