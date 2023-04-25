@@ -46,3 +46,10 @@
     font-weight: 600;
     cursor: pointer;
 }
+.fieldset select{
+    padding: 10px 15px;
+    border: 1px solid rgba(31, 31, 31, .2);
+    border-radius: 5px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
