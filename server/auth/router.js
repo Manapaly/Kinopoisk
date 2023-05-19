@@ -1,6 +1,10 @@
 const express = require('express')
-const router = express.Router();
-const {signUp} = require('./controller')
-router.post('/api/signup', signUp)
+const passport = require('passport')
 
+const router = express.Router();
+const {signUp, SignIn, signOut} = require('./controller')
+
+router.post('/api/signup', signUp)
+router.post('/api/signin', passport.authenticate('local', {failureRedirect : '/login?error=1'}), SignIn)
+router.get('/api/signout', signOut)
 module.exports = router
